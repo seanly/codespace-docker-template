@@ -41,7 +41,7 @@ RUN set -eux \
 COPY --from=seanly/toolset:vimrc /package/vim/init.vim ~/.vimrc
 RUN curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim \
-    ;mkdir -p /root/.config/nvim; ln -s ~/.vimrc ~/.config/nvim/init.vim \
+    ;mkdir -p ~/.config/nvim; ln -s ~/.vimrc ~/.config/nvim/init.vim \
     ;echo "alias vim=nvim" >> ~/.zshrc \
     ;echo "alias k=kubectl" >> ~/.zshrc \
     ;echo "alias vi=nvim" >> ~/.zshrc
